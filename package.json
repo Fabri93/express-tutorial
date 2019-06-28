@@ -4,8 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-"devStart": "nodemon server.js"
-  },
+    "start": "node index.js",
+    "start-watch": "nodemon index.js",
+    "dev": "concurrently \"yarn run start-watch\" \"cd client && yarn start\"",
+    "devStart": "nodemon server.js"
+    },
   "author": "",
   "license": "ISC",
   "dependencies": {
